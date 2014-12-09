@@ -39,7 +39,7 @@ func ImageRead(ImageFile string) (image image.Image) {
 func Resize(img image.Image) {
 
 	//https://github.com/nfnt/resize
-	m := resize.Resize(50, 50, img, resize.NearestNeighbor)
+	m := resize.Resize(5000, 5000, img, resize.NearestNeighbor)
 
 	out, err := os.Create("test_qsized.jpg")
 	if err != nil {
